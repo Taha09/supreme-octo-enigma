@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+  <h1>Amex App µTest*</h1>
+<form method= 'POST' action='{{ url_for("submit")}}'>
+<fieldset>
+        <legend>Configuration:</legend>
+
+          <label for="start_date">Start Date:</label>
+          <input type="date" id="startdate" name="strdate">
+
+          <label for="end_date">End Date:</label>
+          <input type="date" id="enddate" name="endate">
+          <br>
+          <br>
+          <br>
+          <label for="country">Pays:</label>
+          <select id="country" name="country">
+            <option value="GB">UK</option>
+            <option value="NO">Norway</option>
+            <option value="ES">Spain</option>
+            <option value="DE">Germany</option>
+            <option value="FR">France</option>
+            <option value="IT">Italy</option>
+            <option value="CA">Canada</option>
+            <option value="BE">Belgium</option>
+            <option value="TR">Turkey</option>
+            <option value="US">USA</option>
+            <option value="NL">Netherland</option>
+            <option value="AT">Austria</option>
+        </select>
+
+     
+        
+</fieldset>  
+</form>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script>
+    function goPython(){
+        $.ajax({
+          url: "Flask_Test01.py",
+         context: document.body
+        }).done(function() {
+         alert('finished python script');;
+        });
+    }
+</script>
+<form method= 'POST' action= '{{ url_for("submit")}}'>
+    <fieldset>
+        <legend>Chargement des données:</legend>
+<div class="input-Banque File ">
+    <input type="file" class="form-control" name="banquefile" aria-describedby="inputBanqueFileAddon04" aria-label="Upload" >
+    <button class="btn btn-outline-secondary" type="button" id="inputBanqueFileAddon04" >Banque Excel file Button</button>
+  </div>
+  <br>
+
+  <div class="input-Rejet File">
+    <input type="file" class="form-control" name="rejetfile" aria-describedby="inputRejetFileAddon04" aria-label="Upload" >
+    <button class="btn btn-outline-secondary" type="button" id="inputRejetFileAddon04" data-value="{{[r]}}">Rejet Excel File Button</button>
+  </div>
+  <br>
+
+  <div class="input-Taux File">
+    <input type="file" class="form-control" name="tauxfile" aria-describedby="inputTauxFileAddon04" aria-label="Upload" >
+    <button class="btn btn-outline-secondary" type="button" id="inputTauxFileAddon04">Taux Excel File Button</button>
+  </div>
+  <br>
+
+  <div class="input-Zip File">
+    <input type="file" class="form-control" name="zipfile" aria-describedby="inputZipFileAddon04" aria-label="Upload" value="{{[z]}}">
+    <button class="btn btn-outline-secondary" type="button" id="inputZipFileAddon04" > Zip File Button</button>
+  </div>
+  <br>
+
+  <button class="btn btn-outline-secondary" type="submit" id="exe" data-value="{{[s]}}">Executer</button>
+  </fieldset>
+</center>
+</form>
+</body>
+</html>

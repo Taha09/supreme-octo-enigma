@@ -1,0 +1,68 @@
+body{
+    background:#ffffff;
+    margin:0;
+    padding:0;
+    font:20px/24px Arial,Tahoma,sans-serif;
+}
+a{text-decoration:none;}
+.mid{
+    width:1200px;
+    margin:0 auto;
+    background:#ffffff;
+}
+div.header {
+    height: 80px;
+    background: #ffffff;
+}
+
+.topmenu{
+    float:right;
+    height:70px;
+    line-height:70px;
+    margin-right:100px;
+    margin-left:100px;
+}
+.topmenu a{
+    margin:0 0 0 10px;
+    color: #c73077;
+}
+.topmenu a:hover{color:#50195b;}
+.colorline{  height: 20px;
+
+    background: repeating-linear-gradient(to right,
+    #ee6a51   0  ,   #ee6a51  20px,
+    #a883b9  20px,   #a883b9  40px,
+    #eb649f  40px,   #eb649f  60px,
+    #00b6ef  60px,   #00b6ef  80px,
+    #ffd749  80px,   #ffd749 100px,
+    #abc933 100px,   #abc933 120px
+    ); }
+.girlpic {
+    float: left;
+    margin:5px 5px 0 0;
+}
+.boypic{
+    float:right;
+    margin:0 0 5px 5 px;
+}
+.catpic{
+    float: left;
+    margin:10px 15px 0 0;
+}
+.hey{
+    color: dimgray;
+    font-family: 'Hind Siliguri', sans-serif;
+    line-height: 1.2em;
+}
+.hello{
+    font:25px/25px  'Hind Siliguri',sans-serif;
+    color: #c73077;
+}
+.wow{
+    margin:70px;
+    padding:left;
+}
+.price1{
+    font:30px/30px  'Hind Siliguri',sans-serif;
+    color:red;
+}
